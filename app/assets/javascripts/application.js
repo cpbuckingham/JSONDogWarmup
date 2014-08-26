@@ -44,6 +44,16 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
-});
+  str = JSON.stringify(gschoolDogs, null, " ");
+  $('body').append("<ul>"+ str +"</ul>");
 
+
+//  function printData(gschoolDogs) {
+//    var str = '';
+//    for (var key in gschoolDogs) {
+//      if (typeof gschoolDogs[key] == 'object') str += key + printData(gschoolDogs[key]) + ' ';
+//      else str += key + ' => ' + gschoolDogs[key] + ' ';
+//    }
+//    return str;
+//  };
+});
