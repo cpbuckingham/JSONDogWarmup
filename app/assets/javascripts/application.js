@@ -43,11 +43,26 @@ $(document).ready(function () {
         ]
       }
     ]
+
   };
-  str = JSON.stringify(gschoolDogs, null, " ");
-  $('body').append("<ul>"+ str +"</ul>");
+// str = JSON.stringify(gschoolDogs, null, " ");
+
+  $(gschoolDogs.dogs).each(function(index, element){
+    $('#dogs').append('<tr>'+
+    '<td>'+element.owner+'</td>'+
+        '<td> '+element.name+' </td>' +
+        '<td> '+element.preferences[0].favoriteFood+' </td>' +
+        '<td> '+element.preferences[1].favoriteToy+' </td>'
+    );
+
+  });
 
 
+//  var gschoolDogs = JSON.parse(text);
+//  document.getElementById("demo").innerHTML =
+//    gschoolDogs.name + "<br>" +
+//    gschoolDogs.owner + "<br>" +
+//    gschoolDogs.preferences;
 //  function printData(gschoolDogs) {
 //    var str = '';
 //    for (var key in gschoolDogs) {
